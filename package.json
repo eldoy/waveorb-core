@@ -9,6 +9,10 @@
     "build": "node scripts/build.js",
     "push": "node scripts/push.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eldoy/waveorb-core"
+  },
   "author": "Vidar Eldøy <vidar@eldoy.com>",
   "license": "MIT",
   "dependencies": {
