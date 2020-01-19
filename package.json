@@ -3,6 +3,7 @@
   "version": "0.2.0",
   "description": "Waveorb web application framework core",
   "main": "index.js",
+  "bin": "index.js",
   "scripts": {
     "test": "jest --watch",
     "start": "nodemon index.js",
