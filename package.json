@@ -1,6 +1,6 @@
 {
   "name": "waveorb-core",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Waveorb web application framework core",
   "main": "index.js",
   "bin": "index.js",
@@ -17,10 +17,9 @@
   "author": "Vidar Eldøy <vidar@eldoy.com>",
   "license": "MIT",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
     "conficurse": "0.1.0",
     "lodash": "^4.17.15",
-    "presang": "^0.9.1",
+    "presang": "^0.10.0",
     "sirloin": "^0.14.8"
   },
   "devDependencies": {
