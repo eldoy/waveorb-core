@@ -33,7 +33,7 @@
   },
 
   /** Functions being run on each request */
-  routes: {
+  actions: {
     createProjectAsAdmin: {
       filters: ['user', 'admin'],
       validation: {
