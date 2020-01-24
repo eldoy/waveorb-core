@@ -2,7 +2,7 @@ const loader = require('../../lib/loader.js')
 
 describe('loader', () => {
   beforeEach(() => {
-    process.env.WAVEORB_APP = undefined
+    delete process.env.WAVEORB_APP
   })
 
   it('should load an application', async () => {
