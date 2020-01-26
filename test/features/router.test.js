@@ -63,7 +63,7 @@ describe('router', () => {
     }
     let result = await router($)
     expect(result.error.message).toBe('validation error')
-    expect(result.error.data.name).toEqual([ 'minimum length is 5' ])
+    expect(result.data.name).toEqual([ 'minimum length is 5' ])
 
     $.params.data.name = 'hello'
     result = await router($)
