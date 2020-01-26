@@ -56,16 +56,20 @@ describe('router', () => {
       params: {
         path: 'createProject',
         data: {
-          name: 'hey'
+          name: 'hey',
+          key: 5
         }
       },
       t: i18n.t({ locales })
     }
+
     let result = await router($)
     expect(result.error.message).toBe('validation error')
     expect(result.data.name).toEqual([ 'minimum length is 5' ])
+    expect(result.data.key).toEqual([ 'must be one of 7,8' ])
 
     $.params.data.name = 'hello'
+    $.params.data.key = 7
     result = await router($)
     expect(result.hello).toBe('bye')
   })

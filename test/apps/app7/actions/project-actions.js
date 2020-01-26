@@ -4,6 +4,9 @@ module.exports = {
       data: {
         name: {
           minlength: 5
+        },
+        key: {
+          in: [7, 8]
         }
       }
     },
