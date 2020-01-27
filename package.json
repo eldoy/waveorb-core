@@ -1,6 +1,6 @@
 {
   "name": "waveorb-core",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Waveorb Javascript web development framework core",
   "main": "index.js",
   "bin": "index.js",
@@ -19,7 +19,7 @@
   "dependencies": {
     "conficurse": "0.1.0",
     "lodash": "^4.17.15",
-    "presang": "^0.13.2",
+    "presang": "^0.14.0",
     "sirloin": "^0.14.8"
   },
   "devDependencies": {

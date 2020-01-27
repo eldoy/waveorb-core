@@ -203,7 +203,7 @@ describe('validate', () => {
       val: 7
     }
     error = await validate(schema, data, $)
-    expect(error.val).toEqual(['must be one of 5,6'])
+    expect(error.val).toEqual(['must be one of 5, 6'])
   })
 
   // Test nin
@@ -229,7 +229,7 @@ describe('validate', () => {
       val: 5
     }
     error = await validate(schema, data, $)
-    expect(error.val).toEqual(['must not be one of 5,6'])
+    expect(error.val).toEqual(['must not be one of 5, 6'])
   })
 
   // Test match: /regex/
