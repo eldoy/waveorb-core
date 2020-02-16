@@ -1,12 +1,12 @@
 {
   "name": "waveorb-core",
-  "version": "0.3.13",
+  "version": "0.3.14",
   "description": "Waveorb Javascript web development framework core",
   "main": "index.js",
   "bin": "index.js",
   "scripts": {
     "test": "jest --watch",
-    "start": "nodemon index.js",
+    "serve": "nodemon index.js",
     "build": "node scripts/build.js",
     "push": "node scripts/push.js"
   },
@@ -19,7 +19,7 @@
   "dependencies": {
     "conficurse": "0.1.0",
     "lodash": "^4.17.15",
-    "presang": "^0.14.12",
+    "presang": "^0.14.13",
     "sirloin": "^0.15.0"
   },
   "devDependencies": {
