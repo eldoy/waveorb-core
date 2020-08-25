@@ -346,7 +346,7 @@ describe('validate', () => {
   })
 
   // Test minlength
-  it.only('should have a min length', async () => {
+  it('should have a min length', async () => {
     let schema = {
       val: {
         minlength: 5
