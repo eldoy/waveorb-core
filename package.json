@@ -19,8 +19,8 @@
   "dependencies": {
     "conficurse": "0.1.0",
     "lodash": "^4.17.20",
-    "presang": "^0.15.1",
-    "sirloin": "^0.17.1"
+    "presang": "^0.16.0",
+    "sirloin": "^0.17.2"
   },
   "devDependencies": {
     "axios": "^0.20.0",
