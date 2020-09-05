@@ -281,6 +281,9 @@ describe('validate', () => {
     let schema = {
       val: {
         matcher: async function(val) {
+          if (typeof val === 'undefined') {
+            return 'is required'
+          }
           if (val === 5) {
             return 'can not be 5'
           }
@@ -291,13 +294,18 @@ describe('validate', () => {
       val: 5
     }
     let error = await validate(schema, data, $)
-    expect(error.val).toEqual(["can not be 5"])
+    expect(error.val).toEqual(['can not be 5'])
 
     data = {
       val: 4
     }
     error = await validate(schema, data, $)
     expect(error).toBeNull()
+
+    data = {}
+
+    error = await validate(schema, data, $)
+    expect(error.val).toEqual(['is required'])
   })
 
   // Test length
