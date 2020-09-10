@@ -24,6 +24,24 @@ describe('validate', () => {
     expect(error).toBeNull()
   })
 
+  // Test required: function
+  it('should require a value to be set as a function', async () => {
+    let spec = {
+      val: {
+        required: async function(val, $) {
+          return true
+        }
+      }
+    }
+    let data = {}
+    let error = await validate(spec, data, $)
+    expect(error.val).toEqual(['is required'])
+
+    data = { val: 'hello' }
+    error = await validate(spec, data, $)
+    expect(error).toBeNull()
+  })
+
   // Test eq
   it('should be equal to x', async () => {
     let schema = {
