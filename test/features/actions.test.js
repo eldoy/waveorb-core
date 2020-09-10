@@ -101,27 +101,4 @@ describe('actions', () => {
     let result = await actions($)
     expect(result.hello).toBe('hello')
   })
-
-  it('should deny parameter keys', async () => {
-    const app = await loader({ path: 'test/apps/app10', locales })
-    const $ = { app, params: { action: 'createProject', query: { evil: true } } }
-    const result = await actions($)
-    expect(result.query.evil).toBeUndefined()
-  })
-
-  it('should allow parameter keys', async () => {
-    const app = await loader({ path: 'test/apps/app10', locales })
-    const $ = { app, params: { action: 'createProject', query: { something: 'hello', excess: false } } }
-    const result = await actions($)
-    expect(result.query.something).toBeDefined()
-    expect(result.query.excess).toBeUndefined()
-  })
-
-  it('should allow and deny with empty parameter keys', async () => {
-    const app = await loader({ path: 'test/apps/app10', locales })
-    const $ = { app, params: { action: 'createProject' } }
-    const result = await actions($)
-    expect(result.error).toBeUndefined()
-    expect(result.query.evil).toBeUndefined()
-  })
 })
