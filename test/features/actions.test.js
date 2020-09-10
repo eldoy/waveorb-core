@@ -42,20 +42,6 @@ describe('actions', () => {
     expect(result.hello).toBe('main')
   })
 
-  it('should run filters', async () => {
-    const app = await loader({ path: 'test/apps/app6', locales })
-    const $ = { app, params: { action: 'createProject' } }
-    const result = await actions($)
-    expect(result.hello).toBe('bye')
-  })
-
-  it('should run nested filters', async () => {
-    const app = await loader({ path: 'test/apps/app6', locales })
-    const $ = { app, params: { action: 'createProject' } }
-    const result = await actions($)
-    expect(result.logger).toBe('log')
-  })
-
   it('should validate data', async () => {
     const app = await loader({ path: 'test/apps/app7', locales })
     const $ = {
