@@ -299,9 +299,6 @@ describe('validate', () => {
     let schema = {
       val: {
         matcher: async function(val) {
-          if (typeof val === 'undefined') {
-            return 'is required'
-          }
           if (val === 5) {
             return 'can not be 5'
           }
@@ -323,7 +320,7 @@ describe('validate', () => {
     data = {}
 
     error = await validate(schema, data, $)
-    expect(error.val).toEqual(['is required'])
+    expect(error).toBeNull()
   })
 
   // Test length
