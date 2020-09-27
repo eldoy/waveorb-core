@@ -1,6 +1,6 @@
 {
   "name": "waveorb-core",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "Waveorb Javascript web development framework core",
   "main": "index.js",
   "bin": "index.js",
