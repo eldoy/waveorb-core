@@ -20,7 +20,7 @@
     "conficurse": "0.2.1",
     "lodash": "^4.17.20",
     "presang": "^0.18.1",
-    "sirloin": "^0.17.2"
+    "sirloin": "^0.17.3"
   },
   "devDependencies": {
     "axios": "^0.20.0",
