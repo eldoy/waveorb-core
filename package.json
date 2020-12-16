@@ -5,8 +5,8 @@
   "main": "index.js",
   "bin": "index.js",
   "scripts": {
-    "test": "jest --watch",
-    "serve": "nodemon index.js",
+    "test": "WAVEORB_PORT=5070 jest --watch",
+    "serve:test": "WAVEORB_PORT=5070 nodemon index.js",
     "build": "node scripts/build.js",
     "push": "node scripts/push.js"
   },
